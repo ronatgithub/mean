@@ -22,8 +22,8 @@
   "dependencies": {
     "assetmanager": "latest",
     "async": "latest",
-    "bower": "latest",
     "body-parser": "latest",
+    "bower": "latest",
     "compression": "latest",
     "connect-flash": "latest",
     "consolidate": "latest",
@@ -50,6 +50,7 @@
     "request": "latest",
     "serve-favicon": "latest",
     "shelljs": "latest",
+    "swagger-node-express": "^2.1.3",
     "swig": "latest",
     "view-helpers": "latest"
   },

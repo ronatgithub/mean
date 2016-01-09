@@ -1,0 +1,21 @@
+<section data-ng-controller="ItemsController" data-ng-init="find()">
+  <ul class="items unstyled">
+    <li data-ng-repeat="item in items">
+      <span>{{item.created | date:'medium'}}</span> /
+      <span>{{item.user.name}}</span>
+      <h2>
+        <a data-ng-href="/items/{{item._id}}">{{item.title}}</a>
+        <span data-ng-if="hasAuthorization(item)">
+          <a class="btn" href="/items/{{item._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(item);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+      </h2>
+      <div>{{item.content}}</div>
+    </li>
+  </ul>
+  <h1 data-ng-hide="!items || items.length">No items yet. <br> Why don't you <a href="/items/create">Create One</a>?</h1>
+</section>
